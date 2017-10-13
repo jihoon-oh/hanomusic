@@ -1,0 +1,59 @@
+<link rel="stylesheet" href="/css/forum.css"> 
+<div class="postscontainer container"> 
+  <div class="row panel letter">
+      	<center><h1 class="forumtitle">DevConnect Forum</h1></center>
+        <h3 class="panel-title">Welcome to the DevConnect Forum! You can view and comment on existing posts here, or write your own.</h3>
+        <br>
+
+        <!-- Form for new post creation goes here. -->
+        <form method="POST" class="createpost">
+	        <legend>Create New Forum Post</legend>
+	        <div class="form-group">
+	          <label for="title">Title</label>
+	          <input type="text" name="postTitle" id="postTitle" placeholder="Post Title" class="form-control" required autofocus>
+	        </div>
+	        <div class="form-group">
+	          <label for="body">Post Body</label>
+	          <textarea name="postBody" id="postBody" placeholder="Your post's body here." class="form-control" required></textarea>
+	        </div>
+	        <div class="form-group">
+	          <button type="submit" class="btn btn-success">Create Post</button>
+	        </div>
+      	</form>
+
+
+	    <legend class="poststitle">Posts</legend>
+        {{#if postObject}}
+	        <br>
+	        <div class="container" id="post-container">
+	        	{{#ifeq user.role "admin"}}
+	        		{{#each postObject}}
+        				<a href="/forum/{{uuid}}">
+	        				<div class="panel panel-default clickable" >
+	        					<div class="panel-body">
+	        					<form method="post" class="deleteform" action="/forum/delete/{{uuid}}">
+	        						<p class="post_title"><strong>{{postTitle}}</strong>
+	        							<button class="btn btn-danger btn-sm deletebtn" type="submit">
+	        							Delete</button>
+	       							</p></form>
+	        					</div>
+	        				</div>
+        				</a>
+	        		{{/each}}
+	        	{{else}}
+	        		{{#each postObject}}
+        				<a href="/forum/{{uuid}}">
+	        				<div class="panel panel-default clickable" >
+	        					<div class="panel-body">
+	        					<p><strong>{{postTitle}}</strong></p>
+	        					</div>
+	        				</div>
+        				</a>
+	        		{{/each}}
+	        	{{/ifeq}}
+	        </div>
+        {{else}}
+        	<h5 class="text-center">No posts yet</h5>
+        {{/if}}
+  </div>
+</div>

@@ -1,0 +1,75 @@
+/* About page
+/* ----------------- */
+@import url("main.css");
+@import url(https://fonts.googleapis.com/css?family=Josefin+Sans:300,400);
+
+.about-landing {
+  background: url(../img/nyc.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  color: white;
+}
+
+.content {
+	padding: 15% 0 18% 0;
+	text-align: center;
+}
+
+.navbar {
+	margin-bottom: 0px;
+}
+
+.subheader {
+	font-weight: 300;
+	letter-spacing: 1px;
+}
+
+button.btn,
+a.btn {
+	margin: 15px 5px;
+	transition: all 0.5s;
+}
+
+button.btn.btn-primary.my-btn:hover,
+a.btn.btn-primary.my-btn:hover{
+	background: #FFFFFF;
+	color: #2F937B;
+	border-color: transparent;
+}
+
+a.btn.btn-primary.my-btn2 {
+	background: rgba(47, 147, 123, 0);
+	border-color: #FFFFFF;
+	border-radius: 50%;
+	border-width: 2px;
+	padding: 5px 10px 4px 10px;
+	font-size: 25px;
+	color: #FFFFFF;
+}
+
+a.btn.btn-primary.my-btn2:hover{
+	background: #2F937B;
+	color: #ffffff;
+	border-color: transparent;
+}
+
+.letter-heading {
+	font-weight: 400;
+}
+
+.letter {
+	padding: 50px 50px;
+	font-size: 15px;
+	line-height: 30px;
+}
+
+
+@media (min-width: 992px) {
+	.letter {
+		margin-top: 50px;
+		padding: 50px 250px;
+		font-size: 18px;
+	}
+}
