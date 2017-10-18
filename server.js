@@ -9,16 +9,18 @@ var bodyParser = require('body-parser');
 var expressValidator = require('express-validator');
 var dotenv = require('dotenv');
 var exphbs = require('express-handlebars');
+var favicon = require('serve-favicon');
 
 // Load environment variables from .env file
 dotenv.load();
 
 // Controllers
-var IndexController = require('./controllers/index');
+var ledeController = require('./controllers/lede');
 
 var app = express();
 
 var hbs = exphbs.create({
+  defaultLayout: 'main',
   helpers: {
     ifeq: function(a, b, options) {
       if (a === b) {
@@ -45,7 +47,9 @@ app.use(session({ secret: process.env.SESSION_SECRET, resave: true, saveUninitia
 app.use(flash());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.get('/', IndexController.index);
+app.get('/', ledeController.index);
+
+app.use(favicon('./public/img/favicon.ico'));
 
 // Production error handler
 if (app.get('env') === 'production') {

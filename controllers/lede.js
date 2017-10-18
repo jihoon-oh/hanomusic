@@ -2,7 +2,7 @@
  * GET /
  */
 exports.index = function(req, res) {
-  res.render('index', {
-    title: 'Index'
+  res.render('lede', {
+    title: 'Lede'
   });
 };
