@@ -67,5 +67,8 @@
       tError: '<a href="%url%">The image #%curr%</a> could not be loaded.'
     }
   });
+  
+  // Read more button on about page
+  $('.card-text').readmore();
 
 })(jQuery); // End of use strict

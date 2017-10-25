@@ -1,0 +1,7 @@
+#calendar {
+    }
+    #calendar #title {
+        margin: 0 auto 2em auto;
+        letter-spacing: 15px;
+        font-weight: 300;
+    }

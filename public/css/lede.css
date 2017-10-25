@@ -1,15 +1,3 @@
-#lede-filter {
-  background: -moz-linear-gradient(top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.73) 17%, rgba(0,0,0,0.66) 35%, rgba(0,0,0,0.55) 62%, rgba(0,0,0,0.4) 100%);
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0.8)), color-stop(17%,rgba(0,0,0,0.73)), color-stop(35%,rgba(0,0,0,0.66)), color-stop(62%,rgba(0,0,0,0.55)), color-stop(100%,rgba(0,0,0,0.4)));
-	background: -webkit-linear-gradient(top, rgba(0,0,0,0.8) 0%,rgba(0,0,0,0.73) 17%,rgba(0,0,0,0.66) 35%,rgba(0,0,0,0.55) 62%,rgba(0,0,0,0.4) 100%);
-	background: -o-linear-gradient(top, rgba(0,0,0,0.8) 0%,rgba(0,0,0,0.73) 17%,rgba(0,0,0,0.66) 35%,rgba(0,0,0,0.55) 62%,rgba(0,0,0,0.4) 100%);
-	background: -ms-linear-gradient(top, rgba(0,0,0,0.8) 0%,rgba(0,0,0,0.73) 17%,rgba(0,0,0,0.66) 35%,rgba(0,0,0,0.55) 62%,rgba(0,0,0,0.4) 100%);
-	background: linear-gradient(to bottom, rgba(0,0,0,0.8) 0%,rgba(0,0,0,0.73) 17%,rgba(0,0,0,0.66) 35%,rgba(0,0,0,0.55) 62%,rgba(0,0,0,0.4) 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cc000000', endColorstr='#66000000',GradientType=0 );
-	height: 100%;
-	background-attachment: fixed;
-}
-
 header.lede {
   position: relative;
   width: 100%;
@@ -30,16 +18,28 @@ header.lede {
     header.lede .header-content .header-content-inner h1 {
       font-size: 30px;
       font-weight: 700;
+      margin-left: -3px;
       margin-top: 0;
       margin-bottom: 0;
       text-transform: uppercase; }
     header.lede .header-content .header-content-inner hr {
-      margin: 30px auto; }
+      margin: 30px 0; }
     header.lede .header-content .header-content-inner p {
       font-size: 16px;
       font-weight: 300;
       margin-bottom: 50px;
       color: rgba(255, 255, 255, 0.7); }
+    header.lede .header-content .header-content-inner a {
+      background-color: rgba(255, 255, 255, 0);
+      border: 2px solid #eee;
+      border-radius: 0px; }
+      /* There is a strange blue highlight around the box, so the below removes that highlight */
+      header.lede .header-content .header-content-inner a:focus {
+        outline: none !important; 
+        -webkit-appearance: none;
+        box-shadow: none;
+        -moz-box-shadow: none;
+        -webkit-box-shadow: none; }
   @media (min-width: 768px) {
     header.lede {
       height: 100%;
@@ -56,9 +56,10 @@ header.lede {
           margin-right: auto;
           margin-left: auto; }
           header.lede .header-content .header-content-inner h1 {
-            font-size: 50px; }
+            font-size: 50px; 
+            margin-left: -5px; }
           header.lede .header-content .header-content-inner p {
             font-size: 18px;
-            max-width: 80%;
+            max-width: 40%;
             margin-right: auto;
-            margin-left: auto; } }
+            margin-left: 0; } }

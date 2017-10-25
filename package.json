@@ -46,6 +46,7 @@
     "nodemon": "^1.9.1",
     "npm-run-all": "^1.8.0",
     "popper.js": "1.12.3",
+    "readmore-js": "^2.1.0",
     "scrollreveal": "3.3.6",
     "serve-favicon": "^2.4.5"
   },

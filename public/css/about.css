@@ -1,0 +1,17 @@
+#about .card-wrapper .card-img-top {
+    height: 200px;
+}
+
+@media (min-width: 768px) {
+    #about .card-wrapper .card-img-top {
+        height: 500px;
+    }
+}
+
+
+@media (min-width: 992px) {
+    #about .card-wrapper {
+        max-width: 33%;
+        display: inline-block; } 
+        #about .card-wrapper .card-img-top {
+            height: 270px; } }
