@@ -6,6 +6,12 @@
     #media .wrapper {
         padding-left: 30px;
         padding-right: 30px; }
+
+@media (min-width: 768px) {
+    iframe {
+        height: 600px;
+    }
+}
     /*    #media .wrapper #music-video {*/
     /*        height: 300px; }*/
     /*@media (min-width: 768px) {*/

@@ -1,11 +1,19 @@
 #about .card-wrapper .card-img-top {
-    height: 200px;
-}
+    height: 250px; }
+    #about .card-wrapper .card-text {
+        font-family: "Times New Roman";
+        font-weight: 100; 
+        font-size: 1em; 
+    }
+    #about .card-wrapper .read-more, #about .card-wrapper .read-less {
+        cursor: pointer;
+    }
+
 
 @media (min-width: 768px) {
     #about .card-wrapper .card-img-top {
-        height: 500px;
-    }
+        height: 500px; 
+    } 
 }
 
 

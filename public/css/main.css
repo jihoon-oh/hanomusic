@@ -25,8 +25,6 @@ a {
   -webkit-transition: all 0.2s;
   -moz-transition: all 0.2s;
   transition: all 0.2s; }
-  a:focus, a:hover {
-    color: #c12225; }
 
 a {
   outline: none !important; }
@@ -103,4 +101,37 @@ body {
   
 .grey-background {
   background-color: #e9ecef;
+}
+
+.hidden {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+/* These are my own bootstrap spacing utilities. For small,  */
+.sm-mb-2 {
+  margin-bottom: 2em;  
+}
+.sm-mt-2 {
+  margin-top: 2em;
+}
+.sm-my-2 {
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+@media (min-width: 992px) {
+  .lg-mb-0 {
+    margin-bottom: 0;
+  }
+  .lg-mt-0 {
+    margin-top: 0;
+  }
+  .lg-my-0 {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
 }

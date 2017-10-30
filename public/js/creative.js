@@ -68,7 +68,48 @@
     }
   });
   
-  // Read more button on about page
-  $('.card-text').readmore();
+  // Fix wesley's bio height not being same as others
+  var wesley_height = $("#wesley p:nth-child(1)").height();
+  var phill_height = $("#phill p:nth-child(1)").height();
+  $("#wesley p:nth-child(1)").height(phill_height);
 
+  function click_read_more(member) {
+    $(member + " p").removeClass("hidden");
+    $(member + " .read-more").addClass("hidden");
+    // Readjust Wesley text height
+    if(member === "#wesley") {
+      $("#wesley p:nth-child(1)").height(wesley_height);
+    }
+    $(member + " .read-less").removeClass("hidden");
+  }
+  
+  $("#wesley .read-more").click(function() {
+    click_read_more("#wesley");
+  });
+  $("#phill .read-more").click(function() {
+    click_read_more("#phill");
+  });
+  $("#jihoon .read-more").click(function() {
+    click_read_more("#jihoon");
+  });
+  
+  function click_read_less(member) {
+    $(member + " p:last-of-type").addClass("hidden");
+    $(member + " .read-more").removeClass("hidden");
+    if(member === "#wesley") {
+      $("#wesley p:nth-child(1)").height(phill_height);
+    }
+    $(member + " .read-less").addClass("hidden");
+  }
+  
+  $("#wesley .read-less").click(function() {
+    click_read_less("#wesley");
+  });
+  $("#phill .read-less").click(function() {
+    click_read_less("#phill");
+  });
+  $("#jihoon .read-less").click(function() {
+    click_read_less("#jihoon");
+  });
+  
 })(jQuery); // End of use strict
