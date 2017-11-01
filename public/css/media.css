@@ -1,17 +1,21 @@
 #media {
-    }
+    /*padding: 0;*/ }
     #media h3 {
         margin-bottom: 1em;
         margin-top: 1em; }
     #media .wrapper {
         padding-left: 30px;
         padding-right: 30px; }
+        /*#media .wrapper #album-cover {*/
+        /*    height: 500px;*/
+        /*}*/
 
 @media (min-width: 768px) {
     iframe {
         height: 550px;
     }
 }
+    /* THIS IS FOR WHEN WE IMPLEMENT MUSIC VIDEO*/
     /*    #media .wrapper #music-video {*/
     /*        height: 300px; }*/
     /*@media (min-width: 768px) {*/
