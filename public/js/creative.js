@@ -68,6 +68,11 @@
     }
   });
   
+  // Button animation reset
+  $(".btn").click(function() {
+    // $(this).reset();
+  })
+  
   // Fix wesley's bio height not being same as others
   var wesley_height = $("#wesley p:nth-child(1)").height();
   var phill_height = $("#phill p:nth-child(1)").height();

@@ -94,11 +94,28 @@ body {
 .btn {
   font-weight: 700;
   text-transform: uppercase;
-  font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif; }
-
+  font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif; 
+  transition: all 0.3s linear 0s;
+}
+  
 .btn-xl {
   padding: 15px 30px; }
-  
+
+.btn-primary {
+  background-color: rgba(255, 255, 255, 0);
+  border: 2px solid #333;
+  border-radius: 0px;
+  color: #222;
+  cursor: pointer;
+  font-weight: 500;
+}  
+
+.btn-primary:hover {
+  background-color: rgba(255, 255, 255, 0);
+  border: 2px solid #333;
+  color: #222;
+}
+
 .grey-background {
   background-color: #e9ecef;
 }
@@ -109,6 +126,10 @@ body {
 
 .show {
   display: block;
+}
+
+.box-shadow {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 /* These are my own bootstrap spacing utilities. For small,  */

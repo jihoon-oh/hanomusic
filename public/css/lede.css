@@ -32,7 +32,13 @@ header.lede {
     header.lede .header-content .header-content-inner a {
       background-color: rgba(255, 255, 255, 0);
       border: 2px solid #eee;
-      border-radius: 0px; }
+      border-radius: 0px; 
+      color: white;
+    }
+      header.lede .header-content .header-content-inner a:hover {
+        background-color: white;
+        color: black;
+      }
       /* There is a strange blue highlight around the box, so the below removes that highlight */
       header.lede .header-content .header-content-inner a:focus {
         outline: none !important; 
@@ -60,6 +66,6 @@ header.lede {
             margin-left: -5px; }
           header.lede .header-content .header-content-inner p {
             font-size: 18px;
-            max-width: 40%;
+            max-width: 37.5%;
             margin-right: auto;
             margin-left: 0; } }

@@ -1,18 +1,12 @@
 #about .card-wrapper .card-img-top {
     height: 250px; }
-    #about .card-wrapper .card-subtitle {
-        font-style: italic; }
     #about .card-wrapper .card-text {
         font-family: "Times New Roman";
         font-weight: 100; 
         font-size: 1em; }
-    #about .card-wrapper .read-more, #about .card-wrapper .read-less {
-        background-color: rgba(255, 255, 255, 0);
-        border: 2px solid #555;
-        border-radius: 0px;
-        color: #222;
-        cursor: pointer;
-        font-weight: 500;
+    #about .card-wrapper .read-more:hover, #about .card-wrapper .read-less:hover {
+        background-color: #333;
+        color: white;
     }
 
 
