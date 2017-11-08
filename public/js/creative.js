@@ -36,21 +36,12 @@
   });
 
   // Scroll reveal calls
-  window.sr = ScrollReveal();
-  sr.reveal('.sr-icons', {
-    duration: 600,
-    scale: 0.3,
-    distance: '0px'
-  }, 200);
-  sr.reveal('.sr-button', {
-    duration: 1000,
-    delay: 200
-  });
-  sr.reveal('.sr-contact', {
-    duration: 600,
-    scale: 0.3,
-    distance: '0px'
-  }, 300);
+  window.sr = ScrollReveal({ duration: 1000,
+                             reset: true });
+  sr.reveal('#album-wrapper div', 250);
+  sr.reveal('#media iframe', 100);
+  sr.reveal('.card', 100);
+  sr.reveal('.sr-contact');
 
   // Magnific popup calls
   $('.popup-gallery').magnificPopup({
@@ -67,11 +58,6 @@
       tError: '<a href="%url%">The image #%curr%</a> could not be loaded.'
     }
   });
-  
-  // Button animation reset
-  $(".btn").click(function() {
-    // $(this).reset();
-  })
   
   // Fix wesley's bio height not being same as others
   var wesley_height = $("#wesley p:nth-child(1)").height();
