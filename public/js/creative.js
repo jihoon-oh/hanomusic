@@ -62,15 +62,21 @@
   // Fix wesley's bio height not being same as others
   var wesley_height = $("#wesley p:nth-child(1)").height();
   var phill_height = $("#phill p:nth-child(1)").height();
-  $("#wesley p:nth-child(1)").height(phill_height);
+  if (window.matchMedia("(min-width: 768px)").matches) {
+    /* the viewport is at least 768 pixels wide */
+      if(wesley_height < phill_height) {
+      $("#wesley p:nth-child(1)").height(phill_height);
+    }
+  } 
+
 
   function click_read_more(member) {
     $(member + " p").removeClass("hidden");
     $(member + " .read-more").addClass("hidden");
     // Readjust Wesley text height
-    if(member === "#wesley") {
-      $("#wesley p:nth-child(1)").height(wesley_height);
-    }
+    // if(member === "#wesley") {
+    //   $("#wesley p:nth-child(1)").height(wesley_height);
+    // }
     $(member + " .read-less").removeClass("hidden");
   }
   
@@ -87,9 +93,9 @@
   function click_read_less(member) {
     $(member + " p:last-of-type").addClass("hidden");
     $(member + " .read-more").removeClass("hidden");
-    if(member === "#wesley") {
-      $("#wesley p:nth-child(1)").height(phill_height);
-    }
+    // if(member === "#wesley") {
+    //   $("#wesley p:nth-child(1)").height(phill_height);
+    // }
     $(member + " .read-less").addClass("hidden");
   }
   
