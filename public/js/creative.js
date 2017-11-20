@@ -91,7 +91,11 @@
   });
   
   function click_read_less(member) {
-    $(member + " p:last-of-type").addClass("hidden");
+    if(member === "#jihoon") {
+      $("#jihoon .card-text-wrapper > p").addClass("hidden");
+    } else {
+      $(member + " p:last-of-type").addClass("hidden");
+    }
     $(member + " .read-more").removeClass("hidden");
     // if(member === "#wesley") {
     //   $("#wesley p:nth-child(1)").height(phill_height);
